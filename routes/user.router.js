@@ -8,6 +8,9 @@ router
         '/login',
         userController.Login
     )
-
+    .get(
+        '/register',
+        userController.Register
+    )
 
 module.exports = router;
