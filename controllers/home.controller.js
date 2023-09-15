@@ -1,11 +1,9 @@
 class HomeController {
     static Index = (req, res) => {
-        let data = {
+        res.render('index', {
             title: 'Trang chủ',
             page: 'home'
-        }
-
-        res.render('index', data);
+        });
     }
 }
 

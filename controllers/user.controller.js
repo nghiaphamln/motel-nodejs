@@ -1,11 +1,9 @@
 class UserController {
     static Login = (req, res) => {
-        let data = {
+        res.render('users/login', {
             title: 'Đăng nhập',
             page: 'Login'
-        }
-
-        res.render('users/login', data);
+        });
     }
 }
 
