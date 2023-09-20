@@ -10,4 +10,40 @@ app.service('ValidationService', function () {
 
         return "";
     }
-})
+
+    this.ValidatePassword = function (password) {
+        if (!password) {
+            return "Mật khẩu không được trống";
+        }
+
+        if (password.length < 8) {
+            return "Mật khẩu phải có ít nhất 8 ký tự";
+        }
+
+        if (!(/[A-Z]/.test(password))) {
+            return "Mật khẩu phải bao gồm chữ hoa";
+        }
+
+        if (!(/[a-z]/.test(password))) {
+            return "Mật khẩu phải bao gồm chữ thường";
+        }
+
+        if (!(/[0-9]/.test(password))) {
+            return "Mật khẩu phải bao gồm số";
+        }
+
+        return "";
+    }
+
+    this.ValidateFullname = function (fullname) {
+        if (!fullname) {
+            return "Tên không được bỏ trống";
+        }
+
+        if (!(/^[\p{L}\s']+$/u.test(fullname))) {
+            return "Tên không hợp lệ";
+        }
+
+        return "";
+    }
+});

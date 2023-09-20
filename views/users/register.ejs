@@ -7,25 +7,28 @@
             <div class="mb-3">
                 <div class="row">
                     <label class="form-label col-4" for="fullname">Tên đầy đủ</label>
-                    <label class="col text-end text-warning">{{FullNameWarning}}</label>
+                    <label class="col text-end text-danger">{{FullNameWarning}}</label>
                 </div>
-                <input class="form-control item" type="text" id="fullname" ng-model="FullName" data-bs-theme="light">
+                <input class="form-control item" type="text" id="fullname" ng-model="FullName" ng-change="ValidateFullname()" data-bs-theme="light">
             </div>
             <div class="mb-3">
                 <div class="row">
                     <label class="form-label col-4" for="email">Email</label>
                     <label class="col text-end text-danger">{{EmailWarning}}</label>
                 </div>
-                <input class="form-control item" id="email" ng-model="Email" ng-blur="ValidateEmail()" data-bs-theme="light">
+                <input class="form-control item" id="email" ng-model="Email" ng-change="ValidateEmail()" data-bs-theme="light">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password" id="password"  ng-model="Password" data-bs-theme="light">
+                <div class="row">
+                    <label class="form-label col-4" for="password">Password</label>
+                    <label class="col text-end text-danger">{{PasswordWarning}}</label>
+                </div>
+                <input class="form-control" type="password" id="password"  ng-model="Password" ng-change="ValidatePassword()" data-bs-theme="light">
             </div>
             <div class="mb-3">
                 <label>Đã có tài khoản? <a href="/user/login" class="fw-bold">Đăng nhập</a> </label>
             </div>
-            <button class="btn btn-primary" ng-click="Register()">Đăng ký</button>
+            <button class="btn btn-primary" ng-click="Register()" ng-disabled="IsDisable">Đăng ký</button>
         </form>
     </div>
 </section>
