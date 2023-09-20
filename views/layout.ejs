@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="vi-vn">
+<html data-bs-theme="light" lang="vi-vn" ng-app="motelApp">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title><%= title %> - Motel</title>
-    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/Montserrat.css">
-    <link rel="stylesheet" href="../public/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/baguetteBox.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/Montserrat.css">
+    <link rel="stylesheet" href="/public/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/baguetteBox.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/vanilla-zoom.min.css">
 </head>
 
 <body>
 
-<% include layout/navbar.ejs%>
+<% include layout/navbar.ejs %>
 
 <main class="page landing-page">
     <%- body %>
 </main>
 
-<% include layout/footer.ejs%>
+<% include layout/footer.ejs %>
 
-<script src="../public/bootstrap/js/bootstrap.min.js"></script>
-<script src="../public/javascripts/baguetteBox.min.js"></script>
-<script src="../public/javascripts/vanilla-zoom.js"></script>
-<script src="../public/javascripts/theme.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+<script src="/public/javascripts/comon/app.js"></script>
+<script src="/public/javascripts/service/validation.js"></script>
+<script src="/public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/javascripts/baguetteBox.min.js"></script>
+<script src="/public/javascripts/vanilla-zoom.js"></script>
+<script src="/public/javascripts/theme.js"></script>
+<script src="/public/library/sweetalert2.js"></script>
+<script src="/public/javascripts/comon/comon.js"></script>
 </body>
 
 </html>
